@@ -75,9 +75,14 @@ studenti.push(newStudent)
 
 // mostriamo tutti gli studenti
 
+
+const listaElement = document.querySelector("ul");
+
 for(let i = 0; i < studenti.length; i++) {
 
     const actualStudent = studenti[i];
+
+    let testoDaMostrare = ""
 
     for (let key in actualStudent) {
         // key in questo ciclo for-in prende di volta in volta
@@ -85,6 +90,11 @@ for(let i = 0; i < studenti.length; i++) {
         // per accedere al VALORE della proprietà dobbiamo usare 
         // la notazione con parentesi quadre oggetto[variabileDellaChiave]
         console.log(`${key}: ${actualStudent[key]}`)
+
+        testoDaMostrare += `${key}: ${actualStudent[key]}, `;
+
     }
+
+    listaElement.innerHTML += `<li>${testoDaMostrare}</li>`
 
 }
