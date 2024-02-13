@@ -1,30 +1,24 @@
+	
+const palla = {
+    // chiave: "valore",
+    prezzo: 12,
+    tipo: "pallina da golf",
+    colore: "rosso",
+    peso: "14kg",
+}
 
-const nomi = ["Gabriel", "Giordano", "Ilaria"];
+palla.marca = "Supreme";
 
-
-// nuovo oggetto di tipo "persona"
-
-// persona -> "oggetto"
-// nome: "Gabriel", -> proprietà (coppia)
-    // nome -> chiave
-    // "Gabriel" -> valore
-const persona = {
-    nome: "Gabriel",
-    cognome: "Spanu",
-    eta: 27,
-};
-
-// aggiungiamo una proprietà al nostro oggetto
-// se la chiave indicata è di una proprietà già presente verrà sovrascritta
-// altrimenti verrà aggiunta
-persona['citta'] = "Usini";
+console.log(palla)
 
 
 
-// chiedo all'utente quale valore vuole leggere
-const sceltaUtente = prompt("Quale proprietà vuoi?");
+// cilo for che itera per ogni proprietà del nostro oggetto
+// si chiama ciclo for-in
 
-// stampo la proprietà scelta?
-console.log( persona[ sceltaUtente ]);
+for (let chiave in palla) {
 
+    console.log(chiave + ": " + palla[chiave]);
+
+}
 
