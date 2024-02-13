@@ -1,24 +1,25 @@
-	
-const palla = {
-    // chiave: "valore",
-    prezzo: 12,
-    tipo: "pallina da golf",
-    colore: "rosso",
-    peso: "14kg",
+
+const classi = [
+    ["Gian Marco", "Roberto", "Alan", "Francesco"],
+    ["Luca", "Ignazio", "Esmeraldo"],
+    ["Igor", "Emanuele", "Tottore"]
+];
+
+// per stampare il primo elemento della seconda riga:
+console.log(classi[1][0]);
+
+
+
+console.log("------------");
+
+// per stampare tutti gli elementi:
+for(let i = 0; i < classi.length; i++) {
+
+
+    const arrayAttuale = classi[i]; // array
+
+    for(let j = 0; j < arrayAttuale.length; j++) {
+        console.log( arrayAttuale[j] )
+    }
+
 }
-
-palla.marca = "Supreme";
-
-console.log(palla)
-
-
-
-// cilo for che itera per ogni proprietà del nostro oggetto
-// si chiama ciclo for-in
-
-for (let chiave in palla) {
-
-    console.log(chiave + ": " + palla[chiave]);
-
-}
-
