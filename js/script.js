@@ -1,25 +1,41 @@
 
-const classe = {
-    nome: "Classe 118",
-    partenza: "29 Nov 2023",
-    alunni: ["Giorgio", "Luca", "Miriam", "Marco"],
-    professori: ['Elisabetta', 'Gabriel', 'Daniele', 'Davide'],
-}
+// array di oggetti
+const studenti = [
+    {
+        nome: "Gabriel",
+        cognome: "Spanu",
+        eta: 28
+    },
+    {
+        nome: "Spongebob",
+        cognome: "Squarepants",
+        eta: 28
+    },
+    {
+        nome: "Patrick",
+        cognome: "Stella",
+        eta: 28
+    }
+]
 
-// primo alunno della classe
-console.log(classe.alunni[0])
 
+// stampo il nome dello studente con indice 2 (terzo)
+console.log(studenti[2].nome)
 
 console.log("------------------")
 
-// stampiamo il quarto professore inserito nella lista
-console.log(classe.professori[3])
 
-console.log("------------------")
+// stampo tutte le proprietà di ogni studente
+for (let i = 0; i < studenti.length; i++) {
 
-// stampiamo tutti i professori del mio oggetto
-for (let i = 0; i < classe.professori.length; i++) {
+    const oggettoAttuale = studenti[i];
 
-    console.log(classe.professori[i])
+    for (let key in oggettoAttuale) {
+
+        console.log(key + ": " + oggettoAttuale[key])
+        
+    }
+
+    console.log("------------------")
 
 }
